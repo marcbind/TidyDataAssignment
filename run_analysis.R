@@ -3,7 +3,9 @@ library(dplyr)
 library(stringr)
 
 # The directory with all the files. Update accordingly.
-setwd("~/Training/Coursera/TidyDataAssignment/UCI_HAR_Dataset")
+# Or just run this script in the directory where the UCI
+# data exists on your computer, i.e. where the "README.txt" sits.
+# setwd("~/Training/Coursera/TidyDataAssignment/UCI_HAR_Dataset")
 
 # The Task(s):
 # 1: Merges the training and the test sets to create one data set.
@@ -119,5 +121,8 @@ colnames(avg_total) <- names(avg_total) %>%
 
 # Let's write this out too for review
 write.table(avg_total, "./tidy_data_set.txt", row.name=FALSE)
+
+# And I should print this table as well?! Well, as requested:
+print(avg_total)
 
 # The End. Done :-)
